@@ -1,9 +1,3 @@
-Here is your **updated README.md**, fully changed from **task_7 → task_5** everywhere.
-You can paste this directly into:
-
-```
-ci-demo/task_5/README.md
-```
 
 ---
 
