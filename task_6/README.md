@@ -14,17 +14,6 @@ Visualize metrics in Grafana
 
 Export a Grafana dashboard as JSON
 
-📁 Project Structure
-task_6/
-│── app/
-│   ├── main.py
-│   ├── Dockerfile
-│   └── requirements.txt
-│
-│── prometheus/
-│   └── prometheus.yml
-│
-└── docker-compose.yml
 
 🚀 Setup Instructions
 1️⃣ Build & Start the Monitoring Stack
@@ -49,25 +38,30 @@ Visit:
 
 http://localhost:5000
 
+<img width="1919" height="460" alt="image" src="https://github.com/user-attachments/assets/38d6d20b-a122-434e-97d7-81167b0ef7c5" />
+
+
 ✔ Sample App Metrics
 
 Visit:
 
 http://localhost:5000/metrics
 
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/cdbe9c96-375a-4715-9756-f69090a38b61" />
+
+
 ✔ Prometheus
 
 Visit:
 
-http://localhost:9090
-
+http://localhost:9090/targets
 
 Verify target status:
 
-http://localhost:9090/targets
-
-
 You should see sample-app as UP.
+
+<img width="1919" height="609" alt="image" src="https://github.com/user-attachments/assets/cad463d0-ae29-4116-8803-311607df8164" />
+
 
 ✔ Grafana
 
@@ -199,3 +193,9 @@ docker-compose up -d
 Check logs:
 
 docker logs task_6-sample-app-1
+
+
+Final output:
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/723c3ee1-3427-40be-aed6-fc645df91ac6" />
+
