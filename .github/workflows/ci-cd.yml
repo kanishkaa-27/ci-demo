@@ -24,15 +24,20 @@ jobs:
       run: |
         docker build -t task4:${{ github.run_id }} .
 
-    # ---------- Login to Docker Hub ----------
-    
-    # ---------- Tag & Push Image ----------
+    # ---------- Login to Docker Hub (Windows Safe) ----------
     - name: Login to Docker Hub
       run: |
-        $env:DOCKERHUB_TOKEN | docker login -u $env:DOCKERHUB_USERNAME --password-stdin
+        docker login --username $env:DOCKERHUB_USERNAME --password $env:DOCKERHUB_TOKEN
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    # ---------- Tag & Push Image ----------
+    - name: Tag and Push to Docker Hub
+      run: |
+        docker tag task4:${{ github.run_id }} kanishkaa27/task4:latest
+        docker push kanishkaa27/task4:latest
+
     # ---------- Update Kubernetes Manifests ----------
     - name: Update image in deployment.yaml
       run: |
