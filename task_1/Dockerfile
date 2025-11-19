@@ -1,12 +1,13 @@
-FROM python:3.10
+FROM python:3.11-slim
 
-# Install Docker CLI + Curl
-RUN apt-get update && \
-    apt-get install -y docker.io curl && \
-    apt-get clean
-
-# Upgrade pip
-RUN python -m pip install --upgrade pip
-
-# Set working directory
 WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install bash (optional)
+RUN apt-get update && apt-get install -y bash
+
+COPY . .
+
+CMD ["python", "app.py"]
