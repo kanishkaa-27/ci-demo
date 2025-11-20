@@ -103,8 +103,4 @@ These are part of the simulated incident.
 📌 8. Root Cause Analysis (RCA)
 
 A complete RCA of the incident—including logs, evidence, explanation, and proposed fixes—has been documented separately.
-
-📄 For the full RCA, refer to the document:
-👉 “Simulated Production Incident Report”
-
-This document contains the detailed analysis and conclusions for this task.
+ Simulated Production Incident Report & RCA.docx 
