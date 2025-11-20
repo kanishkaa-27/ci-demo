@@ -24,14 +24,14 @@ jobs:
       run: |
         docker build -t task4:${{ github.run_id }} .
 
-    # ---------- Login to Docker Hub (Windows Safe) ----------
     - name: Login to Docker Hub
-      shell: pwsh
+      shell: cmd
       run: |
-        $env:DOCKERHUB_TOKEN | docker login -u $env:DOCKERHUB_USERNAME --password-stdin
+        echo %DOCKERHUB_TOKEN% | docker login -u %DOCKERHUB_USERNAME% --password-stdin
       env:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
 
     # ---------- Tag & Push Image ----------
     - name: Tag and Push to Docker Hub
