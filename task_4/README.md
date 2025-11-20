@@ -27,24 +27,6 @@ This pipeline automates the entire workflow from code commit → Docker image bu
 
 ---
 
-📁 Project Structure
-
-task_4/
-│
-├── src/
-│   ├── app.py
-│   └── requirements.txt
-│
-├── k8s/
-│   ├── deployment.yaml
-│   └── service.yaml
-│
-├── Dockerfile
-└── .github/workflows/ci-cd.yml
-
-
----
-
 🎯 Objective
 
 Build a CI/CD pipeline that performs:
