@@ -1,11 +1,4 @@
-Here is a clean, professional, GitHub-ready README.md for Task_4: End-to-End CI/CD with GitHub Actions + Docker + Kubernetes (Minikube).
 
-You can place this file inside:
-
-D:\Task\ci-demo\task_4\README.md
-
-
----
 
 🚀 Task 4 – End-to-End CI/CD Pipeline (GitHub Actions → Docker Hub → Minikube)
 
