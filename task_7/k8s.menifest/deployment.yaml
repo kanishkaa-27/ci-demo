@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buggy-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: buggy-app
+  template:
+    metadata:
+      labels:
+        app: buggy-app
+    spec:
+      containers:
+      - name: buggy-app
+        image: buggy-app:1
+        ports:
+        - containerPort: 6000
